@@ -1,0 +1,11 @@
+applications:
+  - instances: 1
+    timeout: 180
+    name: neuro-console-ws-client
+    buildpack: sdk-for-nodejs
+    command: 'npm prune --production && NODE_ENV=production npm start'
+    memory: 256M
+    domain: eu-gb.mybluemix.net
+    host: neuro-console-ws-client
+    env:
+      NPM_CONFIG_PRODUCTION: false
